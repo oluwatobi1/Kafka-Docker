@@ -1,0 +1,4 @@
+docker run --rm --name kakfa -it kdocker/kafka:3.5.1 bash // run container
+
+# zookeeper
+docker run -d --rm --name zookeeper --net kafka -v ${PWD}/config/zookeeper-1/zookeeper.properties:/kafka/config/zookeeper.properties kzookeeper:3.5.1
